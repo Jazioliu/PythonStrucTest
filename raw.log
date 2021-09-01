@@ -1,0 +1,2 @@
+2021-08-27 16:58:02,858 | INFO | Downloading from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz to data/00_raw/mnist.npz
+2021-08-27 16:58:03,235 | INFO | Done

@@ -1,0 +1,17 @@
+name: mltmp
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+ - python=3.9.6
+ - pandas
+ - numpy
+ - scikit-learn
+ - jupyter
+ - requests
+ - tensorflow
+ - matplotlib
+ - click
+
