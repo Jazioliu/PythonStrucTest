@@ -1,11 +1,57 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
-# -   repo: https://github.com/psf/black
-#     rev: 19.3b0
-#     hooks:
-#     -   id: black
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-ast
+      - id: check-case-conflict
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: double-quote-string-fixer
+
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.5.7
+    hooks:
+      - id: autopep8
+
+  # - repo: https://github.com/nbQA-dev/nbQA
+  #   rev: 1.1.0
+  #   hooks:
+  #     - id: nbqa-pyupgrade
+  #       args: [--py36-plus]
+  #     - id: nbqa-isort
+  #     - id: nbqa-check-ast
+  #     - id: nbqa-flake8
+  #     - id: nbqa-isort
+  #     # - id : nbqa-mypy
+  #     # - id : nbqa-pylint
+  #     - id: nbqa-yapf
+  #     - id: nbqa-autopep8
+  #     # - id : nbqa-pydocstyle
+
+  - repo: https://github.com/sirosen/fix-smartquotes
+    rev: 0.1.1
+    hooks:
+      - id: fix-smartquotes
+
+  - repo: https://github.com/pycqa/pylint
+    rev: v2.10.2
+    hooks:
+      - id: pylint
+        args:
+          - --errors-only
+          - --max-line-length=80
+          - -d duplicate-code
+          - --disable=E0401
+
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.6.0
+    hooks:
+      - id: reorder-python-imports
+
+  # - repo: https://github.com/asottile/dead
+  #   rev: v1.4.0
+  #   hooks:
+  #     - id: dead

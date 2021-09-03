@@ -3,6 +3,6 @@ import pytest
 
 @pytest.fixture(scope='function', autouse=True)
 def HiAll():
-    print("\nSurprise!!!!")
+    print('\nSurprise!!!!')
     yield
-    print("\nGoodBye~~~~\n")
+    print('\nGoodBye~~~~\n')
