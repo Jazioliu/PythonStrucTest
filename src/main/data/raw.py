@@ -1,5 +1,6 @@
 import click
 import requests
+
 from utility import logger
 
 
@@ -11,7 +12,7 @@ def download_file(url, filename):
 
     response = requests.get(url)
 
-    with open(filename,  'wb') as ofile:
+    with open(filename, 'wb') as ofile:
         ofile.write(response.content)
 
     LOGGER.info('Done')

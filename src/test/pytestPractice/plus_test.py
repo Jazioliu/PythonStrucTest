@@ -1,6 +1,3 @@
-import pytest
-
-
 def plus_numbers(a, b):
     return a + b
 
