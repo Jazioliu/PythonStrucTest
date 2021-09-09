@@ -6,7 +6,7 @@ readonly ROOT_PATH=$(git rev-parse --show-toplevel)
 check_pytest() {
     echo "Running Pytest to check for errors"
 
-    pytest -rx -v $ROOT_PATH
+    pytest -v $ROOT_PATH
 
     pytest_exit_code=$?
     if [ $pytest_exit_code -ne 0 ]; then

@@ -1,4 +1,4 @@
-name: mltmp
+name: jz-test
 
 channels:
   - conda-forge
@@ -14,3 +14,7 @@ dependencies:
  - tensorflow
  - matplotlib
  - click
+ - pre-commit
+ - pylint=2.10.2
+ - pytest
+ - nbqa
